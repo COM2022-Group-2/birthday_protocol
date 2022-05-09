@@ -12,4 +12,21 @@ def encryp(MESSAGE):
         # Encrypt lowercase characters in plain text
         else:
             encryptedMsg += chr((ord(char) + s - 97) % 26 + 97)
-        return encryptedMsg
+    return encryptedMsg
+
+
+def decrypt(MESSAGE):
+    LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    for key in range(len(LETTERS)):
+        translated = ''
+        for symbol in MESSAGE:
+            if symbol in LETTERS:
+                num = LETTERS.find(symbol)
+                num = num - key
+                if num < 0:
+                    num = num + len(LETTERS)
+                translated = translated + LETTERS[num]
+            else:
+                translated = translated + symbol
+        return translated
