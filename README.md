@@ -9,3 +9,9 @@ https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python
 
 UDP communication script which sends message when the date matches member's birthday and check date every 24 hours.
 -encryption added and testing
+
+How to:
+
+Run the receive script first,
+change the ip for your's or the date of today for testing,
+run the send script.
